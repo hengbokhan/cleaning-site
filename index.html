@@ -53,7 +53,7 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type":"Question","name":"성북구 사무실청소 당일 출장이 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 성북구 길음동 정릉동 돈암동 안암동 등 전 지역 당일 출장 가능합니다. 오전 중 연락 주시면 당일 방문 가능합니다."}},
-      {"@type":"Question","name":"성북구 사무실청소 비용은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"10평 기준 10만원부터 시작하며, 평수와 오염도에 따라 달라집니다. 전화 주시면 무료로 견적을 안내해드립니다."}},
+      {"@type":"Question","name":"성북구 사무실청소는 어떤 항목까지 청소해주나요?","acceptedAnswer":{"@type":"Answer","text":"바닥 왁스 코팅, 책상 파티션 먼지 제거, 화장실 소독, 탕비실, 유리창, 복도까지 사무실 전체를 꼼꼼하게 청소합니다. 무료로 상담해드립니다."}},
       {"@type":"Question","name":"사무실청소 소요 시간은 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"10평 기준 1~2시간, 30평 기준 3~5시간 소요됩니다. 오염 정도에 따라 달라질 수 있습니다."}},
       {"@type":"Question","name":"주말이나 공휴일에도 사무실청소 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 굿모닝크린은 연중무휴로 운영합니다. 주말 공휴일 모두 예약 가능합니다."}},
       {"@type":"Question","name":"청소 중 사무실을 비워도 되나요?","acceptedAnswer":{"@type":"Answer","text":"네, 키 전달 후 자리를 비우셔도 됩니다. 청소 완료 후 현장 사진을 전송해드립니다."}},
@@ -141,19 +141,15 @@
     .svc-list li:last-child { border-bottom: none; }
     .svc-list li::before { content: "✓"; color: var(--green-dark); font-weight: 900; flex-shrink: 0; margin-top: 1px; }
 
-    .price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-    .price-card { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(67,160,71,0.15); }
-    .price-card-head { background: var(--green-dark); color: white; padding: 12px 10px; text-align: center; }
-    .price-card-head .size { font-size: 15px; font-weight: 900; }
-    .price-card-head .price { font-size: 20px; font-weight: 900; color: var(--yellow); margin-top: 4px; }
-    .price-card-body { background: var(--green-pale); padding: 12px 10px; }
-    .price-card-body .row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid var(--green-soft); }
-    .price-card-body .row:last-child { border-bottom: none; }
-    .price-card-body .row .lbl { color: #555; }
-    .price-card-body .row .val { font-weight: 700; color: var(--green-deep); }
-    .price-card-full { border-radius: 12px; background: linear-gradient(135deg, var(--green-dark), var(--green-deep)); color: white; padding: 16px; text-align: center; margin-top: 10px; }
-    .price-card-full .title { font-size: 15px; font-weight: 700; opacity: 0.95; }
-    .price-card-full .desc { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+    .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+    .check-card { background: var(--green-pale); border-radius: 12px; padding: 14px; border: 1px solid var(--green-soft); }
+    .check-card .ck-title { font-size: 14px; font-weight: 800; color: var(--green-deep); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .check-card ul { list-style: none; }
+    .check-card li { font-size: 12.5px; color: #444; padding: 4px 0 4px 18px; position: relative; line-height: 1.5; }
+    .check-card li::before { content: "✓"; position: absolute; left: 0; color: var(--green-dark); font-weight: 900; }
+    .benefit-full { border-radius: 12px; background: linear-gradient(135deg, var(--green-dark), var(--green-deep)); color: white; padding: 16px; text-align: center; margin-top: 12px; }
+    .benefit-full .title { font-size: 15px; font-weight: 700; opacity: 0.95; }
+    .benefit-full .desc { font-size: 13px; opacity: 0.85; margin-top: 4px; }
     .price-note { font-size: 11px; color: #777; margin-top: 10px; line-height: 1.7; }
 
     .proc-list { list-style: none; counter-reset: s; }
@@ -310,50 +306,54 @@
   </div>
 
   <div class="card">
-    <div class="card-title">💵 성북구 사무실청소 비용 안내</div>
-    <p style="font-size:13px;color:#555;margin-bottom:12px;">평수와 오염 정도에 따라 아래 기준으로 견적을 안내드립니다. 모든 견적은 <strong>전화 무료 상담</strong> 후 확정됩니다.</p>
-    <div class="price-cards">
-      <div class="price-card">
-        <div class="price-card-head"><div class="size">소규모 사무실</div><div class="price">10만원~</div></div>
-        <div class="price-card-body">
-          <div class="row"><span class="lbl">평수</span><span class="val">10평 이하</span></div>
-          <div class="row"><span class="lbl">소요 시간</span><span class="val">1~2시간</span></div>
-          <div class="row"><span class="lbl">투입 인원</span><span class="val">1~2명</span></div>
-        </div>
+    <div class="card-title">✅ 굿모닝크린 성북구 사무실청소가 다른 이유</div>
+    <p style="font-size:13px;color:#555;margin-bottom:12px;">성북구 사무실청소는 단순 청소가 아니라 <strong>업무 공간의 위생과 첫인상</strong>을 좌우합니다. 굿모닝크린은 아래 항목을 빠짐없이 체크하며 진행합니다.</p>
+    <div class="check-grid">
+      <div class="check-card">
+        <div class="ck-title">🧴 위생·소독</div>
+        <ul>
+          <li>화장실 변기·세면대 살균 소독</li>
+          <li>탕비실 싱크대 기름때 제거</li>
+          <li>손잡이·스위치 접촉부 소독</li>
+          <li>쓰레기통 세척 및 탈취</li>
+        </ul>
       </div>
-      <div class="price-card">
-        <div class="price-card-head"><div class="size">중소 사무실</div><div class="price">15~25만원</div></div>
-        <div class="price-card-body">
-          <div class="row"><span class="lbl">평수</span><span class="val">10~20평</span></div>
-          <div class="row"><span class="lbl">소요 시간</span><span class="val">2~3시간</span></div>
-          <div class="row"><span class="lbl">투입 인원</span><span class="val">2명</span></div>
-        </div>
+      <div class="check-card">
+        <div class="ck-title">✨ 바닥·표면</div>
+        <ul>
+          <li>바닥 묵은 때 제거·왁스 코팅</li>
+          <li>책상·파티션 먼지 제거</li>
+          <li>유리창·창틀 물때 제거</li>
+          <li>몰딩·걸레받이 먼지 제거</li>
+        </ul>
       </div>
-      <div class="price-card">
-        <div class="price-card-head"><div class="size">일반 사무실</div><div class="price">25~40만원</div></div>
-        <div class="price-card-body">
-          <div class="row"><span class="lbl">평수</span><span class="val">20~30평</span></div>
-          <div class="row"><span class="lbl">소요 시간</span><span class="val">3~5시간</span></div>
-          <div class="row"><span class="lbl">투입 인원</span><span class="val">2~3명</span></div>
-        </div>
+      <div class="check-card">
+        <div class="ck-title">⚡ 신속·정확</div>
+        <ul>
+          <li>성북구 전 지역 당일 출장</li>
+          <li>도착 30분 전 사전 연락</li>
+          <li>업무 방해 없는 시간대 협의</li>
+          <li>완료 후 사진 전송 확인</li>
+        </ul>
       </div>
-      <div class="price-card">
-        <div class="price-card-head"><div class="size">대형 사무실</div><div class="price">40만원~</div></div>
-        <div class="price-card-body">
-          <div class="row"><span class="lbl">평수</span><span class="val">30평 이상</span></div>
-          <div class="row"><span class="lbl">소요 시간</span><span class="val">5시간 이상</span></div>
-          <div class="row"><span class="lbl">투입 인원</span><span class="val">3명 이상</span></div>
-        </div>
+      <div class="check-card">
+        <div class="ck-title">🛡️ 안심·보장</div>
+        <ul>
+          <li>청소 보험 가입 완료</li>
+          <li>파손 시 보상 처리</li>
+          <li>친환경 인증 세제 사용</li>
+          <li>재청소 요청 시 무상 처리</li>
+        </ul>
       </div>
     </div>
-    <div class="price-card-full">
-      <div class="title">📞 50평 이상 대형 사무실 · 정기청소 계약</div>
-      <div class="desc">전화 문의 시 맞춤 견적 및 할인 혜택 안내 · 1666-8491</div>
+    <div class="benefit-full">
+      <div class="title">📞 성북구 사무실청소 무료 견적 상담</div>
+      <div class="desc">길음동·정릉동·돈암동·안암동 전 지역 당일 견적 · 1666-8491</div>
     </div>
     <p class="price-note">
-      ※ 오염 정도·층수·이동거리에 따라 변동될 수 있습니다.<br>
-      ※ 성북구 길음동·정릉동·돈암동·안암동 등 전 지역 동일 요금 적용.<br>
-      ※ 정기청소 계약 시 월 1회·월 2회·주 1회 할인 혜택 제공.
+      ※ 성북구 길음동·정릉동·돈암동·안암동·종암동·월곡동 등 전 지역 동일한 품질로 진행합니다.<br>
+      ※ 입주청소·이사청소·상가청소·정기청소 모두 가능하며 정기 계약 시 할인 혜택을 제공합니다.<br>
+      ※ 정확한 견적과 일정은 전화 상담 후 무료로 안내해드립니다.
     </p>
   </div>
 
@@ -361,9 +361,9 @@
     <div class="card-title">📋 사무실청소 진행 절차</div>
     <ol class="proc-list">
       <li><strong>전화 or 온라인 견적 문의</strong> — 평수, 청소 종류, 희망 날짜 전달</li>
-      <li><strong>무료 견적 안내</strong> — 전화 상담 후 즉시 비용 안내</li>
-      <li><strong>예약 확정</strong> — 날짜·시간 확정 및 담당자 배정</li>
-      <li><strong>당일 방문 청소</strong> — 굿모닝크린 전문팀 성북구 현장 방문</li>
+      <li><strong>무료 방문 견적</strong> — 전문가가 현장을 직접 방문해 상태 확인</li>
+      <li><strong>상세 비용 안내</strong> — 방문 견적 후 정확한 비용을 안내</li>
+      <li><strong>예약 확정 및 청소 진행</strong> — 일정 확정 후 굿모닝크린 전문팀 방문 청소</li>
       <li><strong>완료 확인</strong> — 완료 사진 전송 및 만족도 확인</li>
     </ol>
   </div>
@@ -412,8 +412,8 @@
       <div class="faq-a">네, 굿모닝크린은 성북구 길음동·정릉동·돈암동·안암동·종암동 등 전 지역 당일 출장 가능합니다. 오전 중 연락 주시면 당일 방문 가능합니다.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">성북구 사무실청소 비용은 얼마인가요?</div>
-      <div class="faq-a">10평 기준 10만원부터 시작합니다. 평수와 오염 정도에 따라 달라지며, 전화 주시면 무료로 정확한 견적을 안내해드립니다.</div>
+      <div class="faq-q">성북구 사무실청소는 어떤 항목까지 청소해주나요?</div>
+      <div class="faq-a">바닥 왁스 코팅, 책상·파티션 먼지 제거, 화장실 소독, 탕비실, 유리창, 복도까지 사무실 전체를 꼼꼼하게 청소합니다. 평수와 오염 정도에 맞춰 무료로 상담해드립니다.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">청소 중 사무실을 비워도 되나요?</div>
